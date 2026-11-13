@@ -31,8 +31,8 @@ int main() {
 
     printf("=== ROAD RUNNER ===\n");
     printf("High Score: %d\n", highScore);
-    printf("A = Left | D = Right | Q = Quit\n");
-    printf("Press any key to start...");
+    // printf("A = Left | D = Right | Q = Quit\n");
+    // printf("Press any key to start...");
     _getch();
 
     while (1) {
