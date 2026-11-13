@@ -1,0 +1,141 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <windows.h>
+#include <time.h>
+
+void drawRoad(char road[12][3], int score);
+void saveScore(int score);
+
+int main() {
+    char road[12][3];
+    int car = 1;
+    int obstacle = rand() % 3;
+    int obstacleRow = 0;
+    int score = 0;
+    int highScore = 0;
+    int i, j;
+
+    FILE *file;
+
+    srand(time(0));
+
+    // Read previous high score
+    file = fopen("highscore.txt", "r");
+
+    if (file != NULL) {
+        fscanf(file, "%d", &highScore);
+        fclose(file);
+    }
+
+    printf("=== ROAD RUNNER ===\n");
+    printf("High Score: %d\n", highScore);
+    printf("A = Left | D = Right | Q = Quit\n");
+    printf("Press any key to start...");
+    _getch();
+
+    while (1) {
+
+        // Check keyboard input
+        if (_kbhit()) {
+            char key = _getch();
+
+            if ((key == 'a' || key == 'A') && car > 0) {
+                car--;
+            }
+
+            if ((key == 'd' || key == 'D') && car < 2) {
+                car++;
+            }
+
+            if (key == 'q' || key == 'Q') {
+                break;
+            }
+        }
+
+        // Empty the road
+        for (i = 0; i < 12; i++) {
+            for (j = 0; j < 3; j++) {
+                road[i][j] = ' ';
+            }
+        }
+
+        // Place obstacle and player car
+        road[obstacleRow][obstacle] = 'X';
+        road[11][car] = 'A';
+
+        drawRoad(road, score);
+
+        // Check if player hits obstacle
+        if (obstacleRow == 11 && car == obstacle) {
+            break;
+        }
+
+        // Move obstacle down
+        obstacleRow++;
+
+        // Create a new obstacle
+        if (obstacleRow == 12) {
+            obstacleRow = 0;
+            obstacle = rand() % 3;
+            score += 10;
+        }
+
+        Sleep(150);
+    }
+
+    // Game over
+    system("cls");
+
+    printf("GAME OVER!\n");
+    printf("Your Score: %d\n", score);
+
+    if (score > highScore) {
+        printf("NEW HIGH SCORE!\n");
+        saveScore(score);
+    }
+    else {
+        printf("High Score: %d\n", highScore);
+    }
+
+    printf("\nPress any key to exit...");
+    _getch();
+
+    return 0;
+}
+
+// Display the road
+void drawRoad(char road[12][3], int score) {
+    int i, j;
+
+    system("cls");
+
+    printf("ROAD RUNNER\n");
+    printf("Score: %d\n", score);
+    printf("-------------------\n");
+
+    for (i = 0; i < 12; i++) {
+        printf("|");
+
+        for (j = 0; j < 3; j++) {
+            printf(" %c |", road[i][j]);
+        }
+
+        printf("\n");
+    }
+
+    printf("-------------------\n");
+}
+
+// Save the new high score
+void saveScore(int score) {
+    FILE *file;
+
+    file = fopen("highscore.txt", "w");
+
+    if (file != NULL) {
+        fprintf(file, "%d", score);
+        fclose(file);
+    }
+}
