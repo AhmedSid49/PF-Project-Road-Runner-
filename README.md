@@ -1,4 +1,4 @@
-# PF-Project-Road-Runner-
+# PF-Project-Road-Runner:
 1. Project Introduction - What the game is and what it does.
 2. Game Features - Three lanes, obstacle generation, car movement, collision detection and high scores.
 3. Controls - A, D and Q.
