@@ -71,7 +71,7 @@ int i, j;
 system("cls");
 printf("ROAD RUNNER\n");
 printf("Score: %d\n", score);
-printf("*******************\n");
+printf("**************\n");
 for (i = 0; i < 12; i++) {
 printf("|");
 for (j = 0; j < 3; j++) {
@@ -79,7 +79,7 @@ printf(" %c |", road[i][j]);
 }
 printf("\n");
 }
-printf("*******************\n");
+printf("**************\n");
 }
 void savescore(int score) {
 FILE *file;
