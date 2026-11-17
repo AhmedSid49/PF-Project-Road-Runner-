@@ -66,11 +66,11 @@ printf("\nPress any key to exit.");
 _getch();
 return 0;
 }
-void droad(char road[12][3], int score) {
+void droad(char road[12][3],  int score) {
 int i, j;
 system("cls");
 printf("ROAD RUNNER\n");
-printf("Score: %d\n", score);
+printf("Score: %d\n",  score);
 printf("**************\n");
 for (i = 0; i < 12; i++) {
 printf("|");
@@ -81,10 +81,14 @@ printf("\n");
 }
 printf("**************\n");
 }
-void savescore(int score) {
-FILE *file;
-file = fopen("highscore.txt", "w");
-if (file != NULL) {
+void savescore(int score){
+  FILE *file;
+  file=fopen("highscore.txt","w");
+  if(file!=NULL){
+    fprintf(file,"%d",  score);
+    fclose(file);
+  }
+}
 fprintf(file, "%d", score);
 fclose(file);
 }
