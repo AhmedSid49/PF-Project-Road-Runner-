@@ -89,7 +89,3 @@ void savescore(int score){
     fclose(file);
   }
 }
-fprintf(file, "%d", score);
-fclose(file);
-}
-}
