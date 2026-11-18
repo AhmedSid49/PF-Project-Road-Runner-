@@ -2,7 +2,7 @@
 
 ## Section A: Project Introduction
 
-Road Runner is a car-avoidance game developed in C where players control a car across three lanes to avoid incoming obstacles. Using simple keyboard controls, players must dodge obstacles, survive as long as possible, and achieve a high score. The game features random obstacle generation, collision detection, score tracking, and high-score saving.
+Road Runner is a car dodging game made in C where a user controls a car across three lanes and avoid incoming obstacles. Using simple keyboard controls, users must dodge obstacles, survive as long as possible, and achieve a high score. The game consists of random obstacle generation, collision detection, score tracking, and high score saving.
 
 ## Section B: Features & Test Cases (Execution Scenarios)
 
