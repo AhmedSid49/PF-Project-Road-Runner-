@@ -5,87 +5,88 @@
 #include <time.h>
 void droad(char road[12][3], int score);
 void savescore(int score);
+
 int main() {
-char road[12][3];
-int car = 1, obs = rand() % 3, obsrow = 0, score = 0, highscore = 0, i, j;
-FILE *file;
-srand(time(0));
-file = fopen("highscore.txt", "r");
-if (file != NULL) {
-fscanf(file, "%d", &highscore);
-fclose(file);
-}
-printf("****ROAD RUNNER****\n");
-printf("High Score: %d\n", highscore);
-printf("a = Left | d = Right | q = Quit\n");
-printf("Press any key to start and make sure caps lock is off.");
-_getch();
-while (1) {
-if (_kbhit()) {
-char key = _getch();
-if (key == 'a' && car > 0) {
-car--;
-}
-if (key == 'd' && car < 2) {
-car++;
-}
-if (key == 'q') {
-break;
-}
-}
-for (i = 0; i < 12; i++) {
-for (j = 0; j < 3; j++) {
-road[i][j] = ' ';
-}
-}
-road[obsrow][obs] = 'X';
-road[11][car] = 'A';
-droad(road, score);
-if (obsrow == 11 && car == obs) {
-break;
-}
-obsrow++;
-if (obsrow == 12) {
-obsrow = 0;
-obs = rand() % 3;
-score += 10;
-}
-Sleep(150);
-}
-system("cls");
-printf("GAME OVER. Nice Try!\n");
-printf("Your Score: %d\n", score);
-if (score > highscore) {
-printf("NEW HIGH SCORE!\n");
-savescore(score);
-}
-else {
-printf("High Score: %d\n", highscore);
-}
-printf("\nPress any key to exit.");
-_getch();
-return 0;
+    char road[12][3];
+    int car = 1, obs = rand() % 3, obsrow = 0, score = 0, highscore = 0, i, j;
+    FILE *file;
+    srand(time(0));
+    file = fopen("highscore.txt", "r");
+    if (file != NULL) {
+        fscanf(file, "%d", &highscore);
+        fclose(file);
+    }
+    printf("****ROAD RUNNER****\n");
+    printf("High Score: %d\n", highscore);
+    printf("a = Left | d = Right | q = Quit\n");
+    printf("Press any key to start and make sure caps lock is off.");
+    _getch();
+    while (1) {
+        if (_kbhit()) {
+            char key = _getch();
+            if (key== 'a' && car > 0) {
+                car--;
+            }
+            if (key == 'd' && car < 2) {
+                car++;
+            }
+            if (key == 'q') {
+                break;
+            }
+        }
+        for (i = 0; i < 12; i++) {
+            for (j = 0; j < 3; j++) {
+                road[i][j] = ' ';
+            }
+        }
+        road[obsrow][obs] = 'X';
+        road[11][car] = 'A';
+        droad(road, score);
+
+        if (obsrow == 11 && car == obs) {
+            break;
+        }
+        obsrow++;
+        if (obsrow == 12) {
+            obsrow = 0;
+            obs = rand() % 3;
+            score += 10;
+        }
+        Sleep(150);
+    }
+    system("cls");
+    printf("GAME OVER. Nice Try!\n");
+    printf("Your Score: %d\n", score);
+    if (score > highscore) {
+        printf("NEW HIGH SCORE!\n");
+        savescore(score);
+    } else {
+        printf("High Score: %d\n", highscore);
+    }
+    printf("\nPress any key to exit.");
+    _getch();
+    return 0;
 }
 void droad(char road[12][3], int score) {
-int i, j;
-system("cls");
-printf("ROAD RUNNER\n");
-printf("Score: %d\n",  score);
-printf("**************\n");
-for (i = 0; i < 12; i++) {
-printf("|");
-for (j = 0; j < 3; j++) {
-printf(" %c |", road[i][j]);
+    int i, j;
+    system("cls");
+    printf("ROAD RUNNER\n");
+    printf("Score: %d\n", score);
+    printf("**************\n");
+    for (i = 0; i < 12; i++) {
+        printf("|");
+        for (j = 0; j < 3; j++) {
+            printf(" %c |", road[i][j]);
+        }
+        printf("\n");
+    }
+    printf("**************\n");
 }
-printf("\n");
-}
-printf("**************\n");
-}
-void savescore(int score){
-  FILE *file;
-  file=fopen("highscore.txt","w");
-  if(file!=NULL){
-    fprintf(file,"%d",  score);
-    fclose(file);
-  }
+void savescore(int score) {
+    FILE *file;
+    file = fopen("highscore.txt", "w");
+    if (file != NULL) {
+        fprintf(file, "%d", score);
+        fclose(file);
+    }
 }
