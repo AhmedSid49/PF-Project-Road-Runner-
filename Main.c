@@ -19,18 +19,18 @@ int main() {
     printf("****ROAD RUNNER****\n");
     printf("High Score: %d\n", highscore);
     printf("a = Left | d = Right | q = Quit\n");
-    printf("Press any key to start and make sure caps lock is off.");
+    printf("Press any key to start !");
     _getch();
     while (1) {
         if (_kbhit()) {
             char key = _getch();
-            if (key== 'a' && car > 0) {
+            if (key== 'a'|| key=='A' && car > 0) {
                 car--;
             }
-            if (key == 'd' && car < 2) {
+            if (key== 'd'|| key=='D' && car < 2) {
                 car++;
             }
-            if (key == 'q') {
+            if (key== 'q'|| key=='Q') {
                 break;
             }
         }
