@@ -20,7 +20,8 @@ Road Runner is a car dodging game made in C where a user controls a car across t
 - **Description:** Tests the player's ability to move the car between the three available lanes using keyboard controls.
 - **Inputs:** Press `a` to move left and `d` to move right.
 - **Expected Output:** The player's car (`a`) moves between the three lanes. The car cannot move beyond the leftmost or rightmost lane.
-- **Screenshot:** <img width="207" height="387" alt="image" src="https://github.com/user-attachments/assets/608f47df-9801-4a5e-90b4-7657f1560a91" />
+- **Screenshot:** <img width="173" height="377" alt="image" src="https://github.com/user-attachments/assets/ab50a309-590a-4c31-b13c-4fd5637b9cf5" />
+
 
 
 ### Case 3: Random Obstacle Generation
@@ -28,7 +29,8 @@ Road Runner is a car dodging game made in C where a user controls a car across t
 - **Description:** Tests the random generation and downward movement of obstacles on the road.
 - **Inputs:** Start the game and allow the obstacle to move down the road.
 - **Expected Output:** An obstacle (`X`) appears in a randomly selected lane and moves downward towards the player's car. Once it reaches the bottom, another obstacle is generated in a random lane.
-- **Screenshot:** <img width="141" height="125" alt="image" src="https://github.com/user-attachments/assets/37bbd616-d740-4f1e-8ff2-f17824b95e39" />
+- **Screenshot:** <img width="165" height="105" alt="image" src="https://github.com/user-attachments/assets/d82b74b7-25ee-4b45-8fab-e5c489ef7ea9" />
+
 
 
 ### Case 4: Collision Detection & Game Over
@@ -36,7 +38,8 @@ Road Runner is a car dodging game made in C where a user controls a car across t
 - **Description:** Tests whether the game correctly detects a collision when the player's car and an obstacle occupy the same lane at the same position.
 - **Inputs:** Allow an obstacle to reach the player's car without moving to another lane.
 - **Expected Output:** The game ends and displays "GAME OVER. Nice Try!" along with the player's final score.
-- **Screenshot:** <img width="277" height="132" alt="image" src="https://github.com/user-attachments/assets/b0420484-7d82-40a5-8c37-f772329ec09a" />
+- **Screenshot:** <img width="281" height="131" alt="image" src="https://github.com/user-attachments/assets/92fcb36e-bfe6-424d-8e2c-e551a72fa98f" />
+
 
 
 ### Case 5: Score Tracking
@@ -44,7 +47,8 @@ Road Runner is a car dodging game made in C where a user controls a car across t
 - **Description:** Tests whether the player's score increases after successfully avoiding an obstacle.
 - **Inputs:** Avoid an obstacle until it passes the player's car.
 - **Expected Output:** The score increases by 10 points whenever an obstacle successfully passes the player.
-- **Screenshot:** <img width="180" height="180" alt="image" src="https://github.com/user-attachments/assets/1402786a-2427-4508-81dc-cc3cad82a8a6" />
+- **Screenshot:** <img width="222" height="58" alt="image" src="https://github.com/user-attachments/assets/8a5b85f5-2b9a-4b34-b413-f459dc82c468" />
+
 
 
 ### Case 6: High Score Saving & Updating
