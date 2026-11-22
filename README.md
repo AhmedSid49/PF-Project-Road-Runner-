@@ -11,7 +11,8 @@ Road Runner is a car dodging game made in C where a user controls a car across t
 - **Description:** Tests whether the game starts correctly, displays the game title, and retrieves the previously saved high score from the file.
 - **Inputs:** Press any key to start the game.
 - **Expected Output:** The game displays the title "ROAD RUNNER", the saved high score (if available), and the keyboard controls.
-- **Screenshot:**  <img width="671" height="117" alt="image" src="https://github.com/user-attachments/assets/95f751c3-8325-4596-87d7-0adb00eeb713" />
+- **Screenshot:**  <img width="402" height="182" alt="image" src="https://github.com/user-attachments/assets/73c13bc4-98ac-4d23-9c63-adc186f7eaac" />
+
 
 
 ### Case 2: Player Car Movement
