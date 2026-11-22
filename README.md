@@ -38,7 +38,7 @@ Road Runner is a car dodging game made in C where a user controls a car across t
 - **Description:** Tests whether the game correctly detects a collision when the player's car and an obstacle occupy the same lane at the same position.
 - **Inputs:** Allow an obstacle to reach the player's car without moving to another lane.
 - **Expected Output:** The game ends and displays "GAME OVER. Nice Try!" along with the player's final score.
-- **Screenshot:** <img width="281" height="131" alt="image" src="https://github.com/user-attachments/assets/92fcb36e-bfe6-424d-8e2c-e551a72fa98f" />
+- **Screenshot:** <img width="266" height="85" alt="image" src="https://github.com/user-attachments/assets/1e57d87d-c75b-4297-b5bc-d2a32dee9f8a" />
 
 
 
@@ -47,7 +47,8 @@ Road Runner is a car dodging game made in C where a user controls a car across t
 - **Description:** Tests whether the player's score increases after successfully avoiding an obstacle.
 - **Inputs:** Avoid an obstacle until it passes the player's car.
 - **Expected Output:** The score increases by 10 points whenever an obstacle successfully passes the player.
-- **Screenshot:** <img width="222" height="58" alt="image" src="https://github.com/user-attachments/assets/8a5b85f5-2b9a-4b34-b413-f459dc82c468" />
+- **Screenshot:** <img width="168" height="145" alt="image" src="https://github.com/user-attachments/assets/5b1d2b6b-bacf-4475-9f64-945b8ec2be4f" />
+
 
 
 
@@ -56,7 +57,7 @@ Road Runner is a car dodging game made in C where a user controls a car across t
 - **Description:** Tests the program's ability to compare the current score with the previously saved high score and update it when a new record is achieved.
 - **Inputs:** Complete a game with a score higher than the previously saved high score.
 - **Expected Output:** The game displays "NEW HIGH SCORE!" and saves the updated score in `highscore.txt`. If the previous high score is higher, it remains unchanged.
-- **Screenshot:** <img width="195" height="62" alt="image" src="https://github.com/user-attachments/assets/165ec346-e956-4576-badb-6bc6f89eef4a" />
+- **Screenshot:** <img width="207" height="57" alt="image" src="https://github.com/user-attachments/assets/2d884be6-ccae-490b-9821-f897ba6c8ee0" />
 
 
 ### Case 7: Quit Game
@@ -64,7 +65,7 @@ Road Runner is a car dodging game made in C where a user controls a car across t
 - **Description:** Tests whether the player can exit the game using the designated quit key.
 - **Inputs:** Press `Q` during gameplay.
 - **Expected Output:** The current game session ends and the final score is displayed.
-- **Screenshot:** <img width="401" height="151" alt="image" src="https://github.com/user-attachments/assets/ee8db0ed-4501-47bf-b6cc-cc404dc4687b" />
+- **Screenshot:** <img width="295" height="132" alt="image" src="https://github.com/user-attachments/assets/6385c1bf-7bad-41e8-a0e4-51b20ed90b89" />
 
 
 ## Controls
