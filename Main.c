@@ -9,10 +9,9 @@ void savescore(int score);
 int main() {
 char road[12][3];
 int car = 1, obs, obsrow = 0, score = 0, highscore = 0, i, j;
-FILE *file;
 srand(time(0));
 obs = rand() % 3;
-file = fopen("highscore.txt", "r");
+FILE *file = fopen("highscore.txt", "r");
 if (file != NULL) {
 fscanf(file, "%d", &highscore);
 fclose(file);
