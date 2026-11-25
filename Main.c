@@ -36,14 +36,13 @@ if (key == 'q' || key == 'Q') {
 break;
 }
 }
-
-for (i = 0; i < 12; i++) {
-for (j = 0; j < 3; j++) {
+for (i=0; i<12; i++) {
+for (j=0; j<3; j++) {
 road[i][j] = ' ';
 }
 }
-road[obsrow][obs] = 'X';
-road[11][car] = 'A';
+road[obsrow][obs] ='X';
+road[11][car] ='A';
 droad(road, score);
 if (obsrow == 11 && car == obs) {
 break;
@@ -78,9 +77,9 @@ printf("\033[H");
 printf("\033[93mROAD RUNNER\n");
 printf("Score: %d\n", score);
 printf("*************\n");
-for (i = 0; i < 12; i++) {
+for (i=0; i<12; i++) {
 printf("|");
-for (j = 0; j < 3; j++) {
+for (j=0; j<3; j++) {
 if (road[i][j] == 'X') printf("\033[91m");
 if (road[i][j] == 'A') printf("\033[92m");
 printf(" %c \033[93m|", road[i][j]);
